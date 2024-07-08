@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import numpy as np
 st.title('Adomly Introduction')
 
 st.header('Overview')
@@ -44,30 +44,37 @@ with st.expander('Breakdown of cost'):
         +${}""".format(revenue))
     st.metric("Profit", round(profit))
 def profit_graph_data(cost, units):
-        costs = []
-        revenues = []
-        profits = []
-        for num_units in range(1,units):
-            fixed_cost = cost["Tooling"] + cost["Prototype"] + cost["Design"]
-            unit_cost = cost["Unit Cost"]*num_units
-            shopify_fee = cost["Shopify fee"]*num_units
-            transaction_fee = cost["Selling Price"]*cost["Online Transaction Fee"]*num_units
-            shipping = cost["Shipping"]*num_units
-            returns = cost["Returns"]*cost["Selling Price"]*num_units
-            variable_cost = unit_cost+shopify_fee+transaction_fee+shipping+returns
-            total_cost = fixed_cost+variable_cost
-            revenue = cost["Selling Price"]*num_units
-            profit = revenue-variable_cost-fixed_cost
+    # Generate an array of unit counts
+    units_array = np.arange(1, units)
 
-            costs.append(total_cost)
-            revenues.append(revenue)
-            profits.append(profit)
-        df = pd.DataFrame()
-        df["Num Units"] = [i for i in range(1,units)]
-        df["Cost"] = costs
-        df["Revenue"] = revenues
-        df['Profit'] = profits
-        return df
+    # Calculate fixed cost
+    fixed_cost = cost["Tooling"] + cost["Prototype"] + cost["Design"]
+
+    # Calculate variable costs
+    unit_cost = cost["Unit Cost"] * units_array
+    shopify_fee = cost["Shopify fee"] * units_array
+    transaction_fee = cost["Selling Price"] * cost["Online Transaction Fee"] * units_array
+    shipping = cost["Shipping"] * units_array
+    returns = cost["Returns"] * cost["Selling Price"] * units_array
+
+    variable_cost = unit_cost + shopify_fee + transaction_fee + shipping + returns
+    total_cost = fixed_cost + variable_cost
+
+    # Calculate revenue
+    revenue = cost["Selling Price"] * units_array
+
+    # Calculate profit
+    profit = revenue - variable_cost - fixed_cost
+
+    # Create a DataFrame
+    df = pd.DataFrame({
+        "Num Units": units_array,
+        "Cost": total_cost,
+        "Revenue": revenue,
+        "Profit": profit
+    })
+
+    return df
 
 with tab1:
     df = profit_graph_data(cost, units)
