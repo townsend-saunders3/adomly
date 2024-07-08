@@ -1,0 +1,57 @@
+﻿Days,City,Inches,Milli­metres,% Sun,City,Total Hours,Clear Days,Days + Clear Days
+116,"Atlanta, Georgia",50.4,1281,60,"Atlanta, Georgia",2738,110,226
+86,"Austin, Texas",36.3,921,60,"Austin, Texas",2644,115,201
+121,"Baltimore, Maryland",45,1143,57,"Baltimore, Maryland",2582,105,226
+118,"Birmingham, Alabama",56.6,1438,58,"Birmingham, Alabama",2641,99,217
+128,"Boston, Massachusetts",43.6,1107,58,"Boston, Massachusetts",2634,98,226
+166,"Buffalo, New York",40.7,1033,48,"Buffalo, New York",2207,54,220
+112,"Charlotte, North Carolina",43.6,1107,62,"Charlotte, North Carolina",2821,109,221
+127,"Chicago, Illinois",40.9,1038,54,"Chicago, Illinois",2508,84,211
+136,"Cincinnati, Ohio",45.3,1150,50,"Cincinnati, Ohio",2335,81,217
+159,"Cleveland, Ohio",41,1042,49,"Cleveland, Ohio",2280,66,225
+141,"Columbus, Ohio",41.6,1056,50,"Columbus, Ohio",2183,72,213
+82,"Dallas, Texas",38.3,973,61,"Dallas, Texas",2850,135,217
+84,"Denver, Colorado",15.4,390,69,"Denver, Colorado",3107,115,199
+136,"Detroit, Michigan",34.3,872,53,"Detroit, Michigan",2436,75,211
+47,"Fresno, California",11,279,79,"Fresno, California",–,194,241
+149,"Grand Rapids, Michigan",39.4,1001,46,"Grand Rapids, Michigan",–,64,213
+130,"Hartford, Connecticut",47.1,1195,56,"Hartford, Connecticut",2585,82,212
+89,"Honolulu, Hawaii",16.4,417,71,"Honolulu, Hawaii",–,90,179
+107,"Houston, Texas",55.6,1413,59,"Houston, Texas",2578,90,197
+128,"Indianapolis, Indiana",43.6,1108,55,"Indianapolis, Indiana",2440,88,216
+120,"Jacksonville, Florida",47.6,1209,63,"Jacksonville, Florida",2880,94,214
+104,"Kansas City, Missouri",39.3,998,60,"Kansas City, Missouri",2810,120,224
+26,"Las Vegas, Nevada",4.2,106,85,"Las Vegas, Nevada",3825,210,236
+34,"Los Angeles, California",14.3,362,73,"Los Angeles, California",–,147,181
+125,"Louisville, Kentucky",48.3,1228,56,"Louisville, Kentucky",2514,93,218
+111,"Memphis, Tennessee",54.9,1395,64,"Memphis, Tennessee",2888,118,229
+141,"Miami, Florida",67.4,1712,70,"Miami, Florida",3154,74,215
+126,"Milwaukee, Wisconsin",34.6,878,54,"Milwaukee, Wisconsin",2484,90,216
+119,"Minneapolis, Minnesota",31.6,803,58,"Minneapolis, Minnesota",2711,95,214
+123,"Nashville, Tennessee",50.5,1283,56,"Nashville, Tennessee",2510,102,225
+115,"New Orleans, Louisiana",63.4,1609,57,"New Orleans, Louisiana",2649,101,216
+125,"New York, New York",49.5,1258,58,"New York, New York",2535,107,232
+83,"Oklahoma City, Oklahoma",36.4,924,68,"Oklahoma City, Oklahoma",3089,139,222
+130,"Orlando, Florida",51.5,1307,n/a,n/a,n/a,n/a,#VALUE!
+121,"Philadelphia, Pennsylvania",44.1,1120,56,"Philadelphia, Pennsylvania",2498,93,214
+33,"Phoenix, Arizona",7.2,183,85,"Phoenix, Arizona",3872,211,244
+154,"Pittsburgh, Pennsylvania",39.6,1006,45,"Pittsburgh, Pennsylvania",2021,59,213
+163,"Portland, Oregon",43.7,1111,48,"Portland, Oregon",2341,68,231
+127,"Providence, Rhode Island",47.5,1208,58,"Providence, Rhode Island",2606,98,225
+118,"Raleigh, North Carolina",46.1,1170,58,"Raleigh, North Carolina",2606,111,229
+119,"Richmond, Virginia",45.5,1156,63,"Richmond, Virginia",2829,100,219
+35,"Riverside, California",9.4,239,n/a,n/a,n/a,n/a,#VALUE!
+168,"Rochester, New York",35.1,891,51,"Rochester, New York",2298,61,229
+61,"Sacramento, California",19.2,488,78,"Sacramento, California",3608,188,249
+92,"Salt Lake City, Utah",15.5,394,66,"Salt Lake City, Utah",3029,125,217
+81,"San Antonio, Texas",32.4,822,60,"San Antonio, Texas",2629,105,186
+40,"San Diego, California",9.8,249,68,"San Diego, California",3055,146,186
+71,"San Francisco, California",22.9,581,66,"San Francisco, California",–,160,231
+59,"San Jose, California",13.5,342,n/a,n/a,n/a,n/a,#VALUE!
+156,"Seattle, Washington",39.3,999,47,"Seattle, Washington",2170,58,214
+114,"St. Louis, Missouri",41.7,1059,57,"St. Louis, Missouri",2594,101,215
+108,"Tampa, Florida",49.5,1257,66,"Tampa, Florida",2927,101,209
+47,"Tucson, Arizona",10.6,269,85,"Tucson, Arizona",–,193,240
+94,"Tulsa, Oklahoma",41,1040,62,"Tulsa, Oklahoma",–,127,221
+118,"Virginia Beach, Virginia",49.2,1249,60,"Virginia Beach, Virginia",2695,106,224
+118,"Washington, DC",41.8,1062,56,"Washington, DC",2528,96,214
