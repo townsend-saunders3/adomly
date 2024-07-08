@@ -19,7 +19,7 @@ with st.expander("Cost Matrix"):
     accounting_de.set_index("Item", inplace= True)
     accounting_dict = accounting_de.to_dict()
     cost = accounting_dict["Cost"]
-
+units = st.number_input('Units sold' ,2000)
 tab1,tab2 = st.tabs(["Cost", "Profit"])
 with st.expander('Breakdown of cost'):
     num_units = st.number_input('Number of Units Sold', value = 100)
@@ -43,11 +43,11 @@ with st.expander('Breakdown of cost'):
     st.text("""Revenue on the other hand will be Number of units * Selling Price = 
         +${}""".format(revenue))
     st.metric("Profit", round(profit))
-def profit_graph_data(cost):
+def profit_graph_data(cost, units):
         costs = []
         revenues = []
         profits = []
-        for num_units in range(1,5000):
+        for num_units in range(1,units):
             fixed_cost = cost["Tooling"] + cost["Prototype"] + cost["Design"]
             unit_cost = cost["Unit Cost"]*num_units
             shopify_fee = cost["Shopify fee"]*num_units
@@ -63,14 +63,14 @@ def profit_graph_data(cost):
             revenues.append(revenue)
             profits.append(profit)
         df = pd.DataFrame()
-        df["Num Units"] = [i for i in range(1,5000)]
+        df["Num Units"] = [i for i in range(1,units)]
         df["Cost"] = costs
         df["Revenue"] = revenues
         df['Profit'] = profits
         return df
 
 with tab1:
-    df = profit_graph_data(cost)
+    df = profit_graph_data(cost, units)
     st.line_chart(df, x='Num Units',y = ['Cost', 'Revenue'],color=["#FF0000", "#00dd00"], )
     st.caption("Breakeven = {} units".format([z for x,y,z in zip(df.Revenue, df.Cost, df["Num Units"]) if x>y ][0]))
 
