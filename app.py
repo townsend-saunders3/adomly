@@ -21,27 +21,28 @@ with st.expander("Cost Matrix"):
     cost = accounting_dict["Cost"]
 
 tab1,tab2 = st.tabs(["Cost", "Profit"])
-# num_units = st.number_input('Number of Units Sold', value = 100)
-# # cost
-# fixed_cost = cost["Tooling"] + cost["Prototype"] + cost["Design"]
-# unit_cost = cost["Unit Cost"]*num_units
-# shopify_fee = cost["Shopify fee"]*num_units
-# transaction_fee = cost["Selling Price"]*cost["Online Transaction Fee"]*num_units
-# shipping = cost["Shipping"]*num_units
-# returns = cost["Returns"]*cost["Selling Price"]*num_units
-# variable_cost = unit_cost+shopify_fee+transaction_fee+shipping+returns
-# total_cost = fixed_cost+variable_cost
-# revenue = cost["Selling Price"]*num_units
-# profit = revenue-variable_cost-fixed_cost
-# st.text("""Fixed costs from Tooling, Design, Prototype = 
-#     -${}0""".format(fixed_cost))
-# st.text("""Variable Costs Unit Cost + Shopify Fees + Transaction Fees + Shipping Costs + Returns =
-#     -${}0""".format(variable_cost))
-# st.text("""For a grand total of 
-#     -${}0""".format(total_cost))
-# st.text("""Revenue on the other hand will be Number of units * Selling Price = 
-#     +${}""".format(revenue))
-# st.metric("Profit", round(profit))
+with st.expander('Breakdown of cost'):
+    num_units = st.number_input('Number of Units Sold', value = 100)
+    # cost
+    fixed_cost = cost["Tooling"] + cost["Prototype"] + cost["Design"]
+    unit_cost = cost["Unit Cost"]*num_units
+    shopify_fee = cost["Shopify fee"]*num_units
+    transaction_fee = cost["Selling Price"]*cost["Online Transaction Fee"]*num_units
+    shipping = cost["Shipping"]*num_units
+    returns = cost["Returns"]*cost["Selling Price"]*num_units
+    variable_cost = unit_cost+shopify_fee+transaction_fee+shipping+returns
+    total_cost = fixed_cost+variable_cost
+    revenue = cost["Selling Price"]*num_units
+    profit = revenue-variable_cost-fixed_cost
+    st.text("""Fixed costs from Tooling, Design, Prototype = 
+        -${}0""".format(fixed_cost))
+    st.text("""Variable Costs Unit Cost + Shopify Fees + Transaction Fees + Shipping Costs + Returns =
+        -${}0""".format(variable_cost))
+    st.text("""For a grand total of 
+        -${}0""".format(total_cost))
+    st.text("""Revenue on the other hand will be Number of units * Selling Price = 
+        +${}""".format(revenue))
+    st.metric("Profit", round(profit))
 def profit_graph_data(cost):
         costs = []
         revenues = []
