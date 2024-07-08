@@ -76,10 +76,21 @@ def profit_graph_data(cost, units):
 
     return df
 
+def find_breakeven(df):
+    # Find the index where revenue exceeds cost
+    breakeven_index = np.where(df["Revenue"] > df["Cost"])[0]
+    
+    if breakeven_index.size > 0:
+        breakeven_units = df["Num Units"].iloc[breakeven_index[0]]
+    else:
+        breakeven_units = None
+    
+    return breakeven_units
+
 with tab1:
     df = profit_graph_data(cost, units)
     st.line_chart(df, x='Num Units',y = ['Cost', 'Revenue'],color=["#FF0000", "#00dd00"], )
-    st.caption("Breakeven = {} units".format([z for x,y,z in zip(df.Revenue, df.Cost, df["Num Units"]) if x>y ][0]))
+    st.caption("Breakeven = {} units".format(find_breakeven(df)))
 
 
 with tab2:
