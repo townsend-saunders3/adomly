@@ -43,14 +43,10 @@ with st.expander('Breakdown of cost'):
     st.text("""Revenue on the other hand will be Number of units * Selling Price = 
         +${}""".format(revenue))
     st.metric("Profit", round(profit))
-def profit_graph_data(cost, units):
-    # Generate an array of unit counts
-    units_array = np.arange(1, units)
+def profit_graph_data(cost, units, step=100):
+    units_array = np.arange(1, units, step)
 
-    # Calculate fixed cost
     fixed_cost = cost["Tooling"] + cost["Prototype"] + cost["Design"]
-
-    # Calculate variable costs
     unit_cost = cost["Unit Cost"] * units_array
     shopify_fee = cost["Shopify fee"] * units_array
     transaction_fee = cost["Selling Price"] * cost["Online Transaction Fee"] * units_array
@@ -59,14 +55,9 @@ def profit_graph_data(cost, units):
 
     variable_cost = unit_cost + shopify_fee + transaction_fee + shipping + returns
     total_cost = fixed_cost + variable_cost
-
-    # Calculate revenue
     revenue = cost["Selling Price"] * units_array
-
-    # Calculate profit
     profit = revenue - variable_cost - fixed_cost
 
-    # Create a DataFrame
     df = pd.DataFrame({
         "Num Units": units_array,
         "Cost": total_cost,
